@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- *** Use Font Awesome icons in .NET MAUI by Unicode *** -->
+<!-- 1. copy and paste otf or ttf Files to Resources/Fonts/ folder -->
+<!-- 2. go to MauiProgram.cs an add fonts into .ConfigureFonts(fonts =>
+        { fonts.AddFonts("Filename.Filetype", "Aliasname"  -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FontAwesomeHelper.FontAwesomeHelper"
+             xmlns:helper="clr-namespace:FontAwesomeIconByUnicodeFromCsharp.Helpers"
+             Title="FontAwesomeHelper">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!-- Image -->
+        <!-- Attention fontFamily should be correct, otherwise it will be displayed incorrectly -->
+        <Image WidthRequest="80" HeightRequest="80">
+            <Image.Source>
+                <FontImageSource FontFamily="FAB" Glyph="{x:Static helper:FABHelper.Amazon}" Color="Blue" Size="50"/>
+            </Image.Source>
+        </Image>
+        <!-- ImageButton -->
+        <ImageButton HeightRequest="80" WidthRequest="80">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="FAB" Glyph="{x:Static helper:FABHelper.Airbnb}" Color="Yellow" Size="50"/>
+            </ImageButton.Source>
+        </ImageButton>
+        <!-- Label -->
+        <Label  WidthRequest="80" HeightRequest="80" FontFamily="FAB" Text="{x:Static helper:FABHelper.Android}" 
+                FontSize="80" TextColor="Red" HorizontalTextAlignment="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
